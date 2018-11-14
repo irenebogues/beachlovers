@@ -1,4 +1,9 @@
+nav{
+  float: center;
+  padding-right: 200px;
+  padding-bottom: 200 px;
 
+}
 header video {
   position: absolute;
   top: 50%;
