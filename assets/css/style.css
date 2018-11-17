@@ -1,9 +1,14 @@
-nav{
-  float: center;
-  padding-right: 200px;
-  padding-bottom: 200 px;
+nav {
+background-color: grey;
+color: blue;
+text-align: center;
+float: center;
+padding-top: 300px;
+padding-left: 430px;
 
 }
+
+
 header video {
   position: absolute;
   top: 50%;
@@ -24,14 +29,14 @@ header .container {
   position: relative;
   z-index: 2;
 }
-button {
+button active hover {
   background-color: skyblue;
 }
 
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    background: url('https://unsplash.com/photos/WVziwa_DDwI') black no-repeat center center scroll;
   }
   header video {
     display: none;
