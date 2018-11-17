@@ -1,3 +1,8 @@
+/**
+ * Javascript file for proj1_pg3.html
+ * Author: jonathan garcia
+ */
+
 $(document).ready(function(){
 
 	var queryURL = "https://api.coastal.ca.gov/access/v1/locations";
