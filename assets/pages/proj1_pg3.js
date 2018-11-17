@@ -8,13 +8,17 @@ $(document).ready(function(){
 	var queryURL = "https://api.coastal.ca.gov/access/v1/locations";
 
 
-
 	$.ajax({
 		url: queryURL,
 		method: "GET"
 	})
 	.then(function(response){
 		console.log(response);
+
+		var newAttr = "";
+		var newImg = response[4].Photo_1;  //[4].Photo_1
+
+		$('#card4').attr("src", newImg);
 
 		// Beach names here
 		$('#beach-1').text(response[0].NameMobileWeb + ": ");
@@ -35,7 +39,10 @@ $(document).ready(function(){
 		$('#ct-2').append('<p> Parking: ' + response[1].PARKING + '</p>');
 		$('#ct-3').append('<p> Parking: ' + response[2].PARKING + '</p>');
 
-
+		$('#card4').prepend('<img class=`card-img-top` src=' + newImg + ' style=`height: 100px; width: 180px; display: block;`>')
+		
 		// [""0""].PARKING
+		// [4].Photo_1
+
 	})
 });
