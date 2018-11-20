@@ -39,8 +39,13 @@ $(document).ready(function(){
 		$('#ct-2').append('<p> Parking: ' + response[1].PARKING + '</p>');
 		$('#ct-3').append('<p> Parking: ' + response[2].PARKING + '</p>');
 
-		$('#card4').prepend('<img class=`card-img-top` src=' + newImg + ' style=`height: 100px; width: 180px; display: block;`>')
-		
+		$('#card4').prepend('<img class=card-img-top src=' + newImg + ' style="width:286px; height: 180px; display: block;"' +'>');
+		$('.beach-4-name').text(response[4].NameMobileWeb);
+		$('.beach-4-text').append('<p> Bike Friendly: '+ response[4].BIKE_PATH + '</p>');
+		$('.beach-4-text').append('<p> Sand Dunes: '+ response[4].DUNES + '</p>');
+		$('.beach-4-text').append('<p> Parking: '+ response[4].PARKING + '</p>');
+
+
 		// [""0""].PARKING
 		// [4].Photo_1
 
