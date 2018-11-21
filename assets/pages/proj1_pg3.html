@@ -15,16 +15,6 @@
             margin: 0px 0px 15px 0px;
         }
 
-        #go-button{
-            line-height: 0.5;
-            float: right;
-        }
-
-        h5, .card-text {
-            display: inline;
-            float: left;
-        }
-
         .results-area {
             width: 90%;
             margin: 10px auto;
@@ -35,10 +25,9 @@
     </style>
 </head>
 <body>
-
-    <div class="results-area">
-            <div id="title-bar">Best Matches For You</div>
-            <div class="card">
+    <div class="card-group">
+            <!-- <div id="title-bar">Best Matches For You</div> -->
+            <div class="card" id="card1" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title" id="beach-1">Beach:</h5>
                     <p class="card-text" id="ct-1">Text content from API goes here.</p>
@@ -46,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card2" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title" id="beach-2">Beach:</h5>
                     <p class="card-text" id="ct-2">Text content from API goes here.</p>
@@ -54,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="card" id="card4" style="width: 18rem;">
+            <div class="card" id="card3" style="width: 18rem;">
                 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
                 <div class="card-body">
                   <h5 class="card-title beach-4-name"></h5>
@@ -64,7 +53,8 @@
                   <!-- Let's go button also carries all the information of the beach location in order to accurately pin point the beach goers where exactly and how to drive from their current location -->
                 </div>
             </div>
-    </div>
+            </div>
+        </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
