@@ -4,6 +4,7 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
@@ -22,16 +23,16 @@
     </style>
   </head>
   <body>
+
+      <input type="text" [(ngModel)]="message" placeholder="your message...">
+      <h1>Markers</h1>
+      <div *ngFor="let marker of markers | async">
+        <button (click)="flyTo(marker)">{{ marker.properties.message }}</button>
+        <button (click)="removeMarker(marker)">Delete</button>
+      </div>
+      
+      <div class="map" id="map"></div>
     <div id='map'></div>
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaXJlbmVib2d1ZXMiLCJhIjoiY2pvcnVpdmlhMGpvZDN1bXoza3FvZjNmcCJ9.yYaGPjMye0LuhOEXNS8lQg';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10',
-      center: [-84.5125, 39.1015],
-      zoom: 12
-    });
-    // this is where the code from the next step will go
-    </script>
+    
   </body>
 </html>
