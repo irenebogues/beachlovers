@@ -4,8 +4,8 @@
     <title>Beach Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <script type='text/javascript'
-    src='https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,weather'></script>
+    <!-- <script type='text/javascript'
+    src='https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,weather'></script> -->
     <style>
        #map{
       height:400px;
@@ -15,8 +15,13 @@
     </style>
   </head>
   <body>
-    <h1>My Beach Map</h1>
+    <h1>Beach Lovers Map</h1>
     <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe03-e2UFM62yLOyyfem0vliPlYclxfuw&callback=initMap">
+    </script>
+    <!-- My Script -->
+    <!-- <script src="map.js"></script> -->
     <script>
       // Note: This requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -26,8 +31,9 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 34.0259216, lng: -118.7797571},
-          zoom:10,
+          zoom:4.5,
         });
+        var marker = new google.maps.Marker({position: {lat: 41.992854, lng: -124.208809}, map: map});
         infoWindow = new google.maps.InfoWindow;
 
         //  HTML5 geolocation.
@@ -59,14 +65,8 @@
         infoWindow.open(map);
       }
 
-     
     
     </script>
-    
-<!-- Map Script -->
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe03-e2UFM62yLOyyfem0vliPlYclxfuw&callback=initMap">
-    </script>
   </body>
 </html>
