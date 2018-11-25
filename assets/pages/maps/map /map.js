@@ -2,6 +2,10 @@
 //invoking user exact location
 window.onload = getMyLocation;
 
+/*
+https://api.coastal.ca.gov/access/v1/locations
+*/
+
 //This function is inokved asynchronously by the HTML5 geolocation API.
 function displayLocation(position) {
   //The latitude and longitude values obtained from HTML 5 API.
@@ -43,3 +47,7 @@ function showMap(latLng) {
       }
     }
   }
+
+
+  
+const 

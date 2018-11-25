@@ -11,12 +11,32 @@
       height:400px;
       width:100%;
     }
-      
+    #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        padding-right: 100px;
+        padding-bottom: -20px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
     </style>
   </head>
   <body>
     <h1>Beach Lovers Map</h1>
+    
     <div id="map"></div>
+    <div id="floating-panel">
+      Origin: <input type="text" readonly id="origin">
+      Destination: <input type="text" readonly id="destination"><br>
+      Heading: <input type="text" readonly id="heading"> degrees
+    </div>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe03-e2UFM62yLOyyfem0vliPlYclxfuw&callback=initMap">
     </script>
@@ -70,3 +90,7 @@
 
   </body>
 </html>
+
+<!-- open google maps in browser -->
+<!-- http://maps.google.com/?q=<lat>,<lng> -->
+
