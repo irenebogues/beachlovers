@@ -12,9 +12,9 @@
     height: 100%; 
     background-color: #ffffff; 
     background-image: url("https://picsum.photos/3000/2000?image=881"); 
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
     background-size: cover; 
-    background-position: 50% 50%; } 
+    } 
 
     /* ---- stats.js ---- */ 
   .count-particles { 
@@ -29,8 +29,8 @@
       padding-bottom: 2px; 
       font-family: Helvetica, Arial, sans-serif; 
       font-weight: bold; } 
-
-
+      /* navbar */
+     
     /* header styling */
 
     h1.display-4 {
@@ -69,10 +69,15 @@
       width: 40%;
     }
 
+    
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      }
 
-    footer {
-
-      flex-shrink: inherit;
 
     }
     @media (pointer: coarse) and (hover: none) {
