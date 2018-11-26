@@ -1,5 +1,6 @@
 <!-- There are 3 API's used in this code  -->
 <!-- Geolocation API, Directions API, Maps Javascript API -->
+<!-- All three API's are under one key -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,6 +50,12 @@
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
+      /*
+        When you calculate directions, 
+        you need to specify which transportation mode to use.
+         The following travel modes that is used in this code is DRIVING
+        */
+      //  This code is explained further in https://developers.google.com/maps/documentation/javascript/directions
       function calculateRoute(from, to) {
         // Center initialized to Malibu, California
         var myOptions = {
@@ -58,7 +65,7 @@
         };
         // Draw the map
         var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
-
+        // google.maps.DirectionsService Communicates with Google Maps API Direction Service
         var directionsService = new google.maps.DirectionsService();
         var directionsRequest = {
           origin: from,
