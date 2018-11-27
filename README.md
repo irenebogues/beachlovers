@@ -17,6 +17,7 @@ Apply all the technologies learned up to current point in bootcamp to create an 
 * JavaScript
 * Ajax
 * jQuery
+* REST API
 * Google Maps API
 * California Coastal Commission API
 
