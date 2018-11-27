@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="user-input">
+      <!-- BIKE CHOICE -->
+      <div class="form-group">
+        <label for="BIKE_PATH"
+          ><i class="fas fa-bicycle fa-2x"></i> Are you biking?</label
+        >
+        <select
+          class="form-control q-bike"
+          id="option1"
+          data-choice-type="BIKE_PATH"
+        >
+          <option selected>Choose</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <!-- BIKE PATH -->
+      <!-- DOG FRIENDLY CHOICE -->
+      <div class="form-group">
+        <label for="DOG_FRIENDLY"
+          ><i class="fas fa-dog fa-2x"></i> Will your dog join you?</label
+        >
+        <select
+          class="form-control q-dog"
+          id="option2"
+          data-choice-type="DOG_FRIENDLY"
+        >
+          <option selected>Choose</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <!-- DOG FRIENDLY -->
+      <!-- PARKING CHOICE -->
+      <div class="form-group">
+        <label for="PARKING"
+          ><i class="fas fa-parking fa-2x"></i> Do you need parking?</label
+        >
+        <select
+          class="form-control q-parking"
+          id="option3"
+          data-choice-type="PARKING"
+        >
+          <option selected>Choose</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <!-- PARKING -->
+      <!-- RESTROOMS CHOICE -->
+      <div class="form-group">
+        <label for="RESTROOMS"
+          ><i class="fas fa-toilet-paper fa-2x"></i> Must have public
+          restrooms?</label
+        >
+        <select
+          class="form-control q-restrooms"
+          id="option4"
+          data-choice-type="RESTROOMS"
+        >
+          <option selected>Choose</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <!-- RESTROOMS -->
+
+      <!-- submit button -->
+      <button type="submit" class="btn btn-primary" id="amenities-button">
+        Submit
+      </button>
+    </form>
+    <!-- form-div -->
+  </body>
+  <script>
+    $('#user-input').submit(event => {
+      event.preventDefault();
+      const userSelections = $('.form-control'); //grabs raw jquery array of the select tags
+      const formattedSelections = []; //empty array to only store user option
+      for (let i = 0; i < userSelections.length; i++) { //loops thru jquery array to grab user option for each item
+        const userOption = $(userSelections[i])
+          .find(':selected')
+          .text();
+        formattedSelections.push(userOption);
+      }
+      console.log(formattedSelections);//formattedSelections will now hold the user options for each question
+      //You can now use this to populate Yes/No responses instead of hard coding it
+    });
+  </script>
+</html>
