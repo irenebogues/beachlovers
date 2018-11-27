@@ -79,7 +79,7 @@
       }
 
 
-    }
+    
     @media (pointer: coarse) and (hover: none) {
       header {
         background: url("https://picsum.photos/3000/2000?image=881") black no-repeat center center scroll;

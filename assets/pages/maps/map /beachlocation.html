@@ -7,6 +7,7 @@
     <title>Beach Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type='text/javascript'
@@ -17,6 +18,11 @@
       width:100%;
       padding-top: 10px;
     }
+
+      #to, #to-link, #two {
+        display: none;
+    
+      }
     </style>
   </head>
   <body>
@@ -29,8 +35,8 @@
         <a id="from-link" href="#">Get my position</a>
         <br />
   
-        <label for="to">To:</label>
-        <input type="text" id="to" name="to" required="required" placeholder="Another address" size="30" />
+        <label for="to" id="two">To:</label>
+        <input type="text" id="to" name="to" placeholder="Another address" size="30" />
         <a id="to-link" href="#">Get my position</a>
         <br />
   
@@ -56,6 +62,7 @@
          The following travel modes that is used in this code is DRIVING
         */
       //  This code is explained further in https://developers.google.com/maps/documentation/javascript/directions
+      var beachName = "pelican state beach"
       function calculateRoute(from, to) {
         // Center initialized to Malibu, California
         var myOptions = {
@@ -124,6 +131,8 @@
 
         $("#calculate-route").submit(function(event) {
           event.preventDefault();
+          $("#to").val(beachName);
+          console.log($('#to').val());
           calculateRoute($("#from").val(), $("#to").val());
         });
       });
