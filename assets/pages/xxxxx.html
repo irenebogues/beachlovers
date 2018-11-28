@@ -101,54 +101,47 @@
             var chooseToilet    = 'Yes';    // RESTROOMS
 
             // Event listener - listens to changes in form
-            $('#user-input').submit(event => {
-                event.preventDefault();
-                const userSelections = $('.form-control'); //grabs raw jquery array of the select tags
-                const formattedSelections = []; //empty array to only store user option
-                for (let i = 0; i < userSelections.length; i++) { //loops thru jquery array to grab user option for each item
-                    const userOption = $(userSelections[i])
-                    .find(':selected')
-                    .text();
-                    formattedSelections.push(userOption);
-                }
-                console.log(formattedSelections);
             
-                //formattedSelections will now hold the user options for each question
-      //You can now use this to populate Yes/No responses instead of hard coding it
-    
+            $('.form-group').on('change', function(event){
+            event.preventDefault();
+              chooseBike      = $('#option1').val();		// Hold answer to option1	
+            chooseDog 		= $('#option2').val();		// Hold answer to option2
+              chooseParking 	= $('#option3').val();		// Hold answer to option3
+             chooseToilet 	= $('#option4').val();		// Hold answer to option4
+             })
             // Step 2 - Filter results
-            /*
-                API OBJECTS PROPERTIES
-                path    -- response[index].property
-                example -- response[0].BIKE_PATH
-                BIKE_PATH
-                DOG_FRIENDLY
-                PARKING
-                RESTROOMS
-            */
-            // var beachArray  = [];
-            // var count = 0;
-            // var yes = 0, no = 0;
+            
+                // API OBJECTS PROPERTIES
+                // path    -- response[index].property
+                // example -- response[0].BIKE_PATH
+                // BIKE_PATH
+                // DOG_FRIENDLY
+                // PARKING
+                // RESTROOMS
+        
+            var beachArray  = [];
+            var count = 0;
+            var yes = 0, no = 0;
 
-            // for (let i = 0; i < response.length; i++) {
-            //     if ((response[i].BIKE_PATH === chooseBike) && 
-            //         (response[i].DOG_FRIENDLY === chooseDog)&& 
-            //         (response[i].PARKING === chooseParking)&& 
-            //         (response[i].RESTROOMS === chooseToilet)){
-            //         tmpArr[i] = response[i];
-            //     }
-            // }
+            for (let i = 0; i < response.length; i++) {
+                if ((response[i].BIKE_PATH === chooseBike) && 
+                    (response[i].DOG_FRIENDLY === chooseDog)&& 
+                    (response[i].PARKING === chooseParking)&& 
+                    (response[i].RESTROOMS === chooseToilet)){
+                    tmpArr[i] = response[i];
+                }
+            }
 
-            // // This will filter the results - Each NameMobileWeb will be unique
-            // // ======================================================================
-            // var uniqueNames = [];
-            // $.each(tmpArr, function(i, el){
-            //     if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
-            // });
+            // This will filter the results - Each NameMobileWeb will be unique
+            // ======================================================================
+            var uniqueNames = [];
+            $.each(tmpArr, function(i, el){
+                if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+            });
 
-            // console.log(tmpArr);
-            // console.log(uniqueNames);
-            // // ======================================================================
+            console.log(tmpArr);
+            console.log(uniqueNames);
+            // ======================================================================
             
             //  console.log(response);
             
