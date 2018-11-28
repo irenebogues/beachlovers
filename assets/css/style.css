@@ -1,45 +1,91 @@
-nav {
-background-color: grey;
-color: blue;
-text-align: center;
-float: center;
-padding-top: 300px;
-padding-left: 430px;
-
+/* ---- reset ---- */
+ body{ 
+   margin:0; 
+   font:normal 75% Arial, Helvetica, sans-serif; 
+   color: white;
 }
 
+ /* ---- particles.js container ---- */ 
+ #particles-js {
+    position:absolute; 
+    width: 100%; 
+    height: 100%; 
+    background-color: #ffffff; 
+    background-image: url("https://picsum.photos/3000/2000?image=881"); 
+    background-repeat: repeat; 
+    background-size: cover; 
+    } 
 
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
+    /* ---- stats.js ---- */ 
+  .count-particles { 
+      background: #000022; 
+      position: absolute; top: 48px; 
+      left: 0; width: 80px; 
+      color: #13E8E9; 
+      font-size: .8em; 
+      text-align: left; 
+      text-indent: 4px; 
+      line-height: 14px; 
+      padding-bottom: 2px; 
+      font-family: Helvetica, Arial, sans-serif; 
+      font-weight: bold; } 
+      /* navbar */
+     
+    /* header styling */
 
-header .container {
-  font: white;
-  position: relative;
-  z-index: 2;
-}
-button active hover {
-  background-color: skyblue;
-}
+    h1.display-4 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      color: white;
+    }
+
+    .tagline {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: white;
+    }
+      
+
+    .row {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: lightblue;
+      border-radius: 2px;
+      border: none;
+      height: 45px;
+      padding: 0;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .lg {
+      width: 40%;
+    }
+
+    
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      }
 
 
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://unsplash.com/photos/WVziwa_DDwI') black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
-}
+    }
+    @media (pointer: coarse) and (hover: none) {
+      header {
+        background: url("https://picsum.photos/3000/2000?image=881") black no-repeat center center scroll;
+      }
+      header video {
+        display: none;
+      }
+    }
 

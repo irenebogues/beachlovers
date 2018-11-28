@@ -1,0 +1,34 @@
+<!-- 
+    Experementing on user criteria using snapshot
+    Firebase Database owner: Jonathan
+    Author: Irene
+    Created: Nov. 26, 2018
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>User Criteria</title>
+  </head>
+  <body>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyASGSOPwe4CpZSRdA5IbOtR6t5KpHIXIvU",
+    authDomain: "cal-access-locations.firebaseapp.com",
+    databaseURL: "https://cal-access-locations.firebaseio.com",
+    projectId: "cal-access-locations",
+    storageBucket: "cal-access-locations.appspot.com",
+    messagingSenderId: "145373739846"
+  };
+  firebase.initializeApp(config);
+  const beachData = firebase.database()
+  beachData.ref().orderByChild("BIKE_PATH").equalTo("Yes")  .once("value").then(function(snapshot){
+    console.log(snapshot.val())
+  })
+</script>
+  </body>
+</html>

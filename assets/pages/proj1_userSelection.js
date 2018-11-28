@@ -1,41 +1,81 @@
 /**
- * Javascript file for proj1_userSelection.js
- * author: jonathan
+ * 	Javascript file for proj1_userSelection.js
+ * 	Author: Jonathan Garcia
+ * 	First Created 11/13/2018
+ * 	Last Modified 11/20/2018 
  */
 
 $(document).ready(function(){
+	
+	// Initialize Firebase - This Database was used for test purposes
+	var config = {
+		apiKey: 			"AIzaSyASGSOPwe4CpZSRdA5IbOtR6t5KpHIXIvU",
+		authDomain: 		"cal-access-locations.firebaseapp.com",
+		databaseURL: 		"https://cal-access-locations.firebaseio.com",
+		projectId: 			"cal-access-locations",
+		storageBucket: 		"cal-access-locations.appspot.com",
+		messagingSenderId: 	"145373739846"
+	  };
+	  
+	  firebase.initializeApp(config);
 
-	var queryURL = "https://api.coastal.ca.gov/access/v1/locations";
+	  var database = firebase.database();		// Variable to interact with Firebase
 
+	/**
+	 * 	OBJECT
+	 * 	Hold the user choices of either Yes/No
+	 * 	Contains five properties
+	 * 	Each key in this object shares the same key name
+	 * 	as the coastal API
+	 */
+	
+	var objChoices = {
+		BIKE_PATH: "",
+		DOG_FRIENDLY: "",
+		PARKING: "",
+		RESTROOMS: "",
+		VOLLEYBALL: ""
+	}
+	
+	/**
+	 * 	VARIABLES
+	 * 	These five variables hold the answers to each choice the user selected
+	 * 	Each variable is used inside the change event listener
+	 */
+	
+	var bike, dog, parking, restrooms, volleyball;
 
+	// LISTENER - CHANGE EVENT LISTENER
+	$('.form-group').on('change', function()
+	{
 
-	$.ajax({
-		url: queryURL,
-		method: "GET"
-	})
-	.then(function(response){
-		console.log(response);
+		bike 		= $('#option1').val();		// Hold answer to option1	
+		dog 		= $('#option2').val();		// Hold answer to option2
+		parking 	= $('#option3').val();		// Hold answer to option3
+		restrooms 	= $('#option4').val();		// Hold answer to option4
+		volleyball 	= $('#option5').val();		// Hold answer to option5
 
-		// Beach names here
-		$('#beach-1').text(response[0].NameMobileWeb + ": ");
-		$('#beach-2').text(response[1].NameMobileWeb + ": ");
-		$('#beach-3').text(response[2].NameMobileWeb + ": ");
+		objChoices.BIKE_PATH 	= bike;			// Set bike answer into Obj
+		objChoices.DOG_FRIENDLY = dog;			// Set dog answer into Obj
+		objChoices.PARKING 		= parking;		// Set parking answer into Obj
+		objChoices.RESTROOMS 	= restrooms;	// Set restrooms answer into Obj
+		objChoices.VOLLEYBALL 	= volleyball;	// Set volleyball answer into Obj
+		
+		console.log(objChoices);				// See object contents
 
-		// Beach amenities
-		// [""0""].BIKE_PATH -- sample API path
-		$('#ct-1').text('Bike Friendly: '+ response[0].BIKE_PATH);
-		$('#ct-2').text('Bike Friendly: '+ response[1].BIKE_PATH);
-		$('#ct-3').text('Bike Friendly: '+ response[2].BIKE_PATH);
+	}); // END OF EVENT LISTENER - CHANGE
 
-		$('#ct-1').append('<p> Sand Dunes: ' + response[0].DUNES + '</p>');
-		$('#ct-2').append('<p> Sand Dunes: ' + response[1].DUNES + '</p>');
-		$('#ct-3').append('<p> Sand Dunes: ' + response[2].DUNES + '</p>');
+	// LISTENER - SUBMIT BUTTON LISTENER
+	$('.btn-primary').on('click', function()
+	{
 
-		$('#ct-1').append('<p> Parking: ' + response[0].PARKING + '</p>');
-		$('#ct-2').append('<p> Parking: ' + response[1].PARKING + '</p>');
-		$('#ct-3').append('<p> Parking: ' + response[2].PARKING + '</p>');
+		// Send the data in the object to firebase
+		
+		// TODO: Bring user to page where they see their results
 
+		database.ref().push(objChoices);		// push contents of objChoices to Firebase
+		// Tested - this works
 
-		// [""0""].PARKING -- Template to API path.
-	})
+	}); // END OF EVENT LISTENER - SUBMIT BUTTON
+	
 });
