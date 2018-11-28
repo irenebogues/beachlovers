@@ -23,7 +23,7 @@ Apply all the technologies learned up to current point in bootcamp to create an 
 
 ## Authors
 
-**Jonathan Garcia** 
-**Irene Bogues** 
-**Margaretta Hemmings**
-**Omar El Gammal** 
+**Jonathan Garcia** --Author--
+**Irene Bogues** --Author --
+**Margaretta Hemmings** --Author --
+**Omar El Gammal** --Author --
