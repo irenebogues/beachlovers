@@ -21,8 +21,3 @@ Apply all the technologies learned up to current point in bootcamp to create an 
 * Google Maps API
 * California Coastal Commission API
 
-## Authors
-**Margaretta Hemmings** - *Author*
-**Irene Bogues** - *Author*
-**Omar El Gammal** - *Author*
-**Jonathan Garcia** - *Author*
