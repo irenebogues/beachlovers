@@ -129,7 +129,7 @@
 
 				// console.log('--------------------');
 				// console.log(final);
-				
+
 				// Populate webpage with filtered results
 				for (let index = 0; index < 9; index++) 
             	{
@@ -164,7 +164,7 @@
                     // newParagraph.text(final[index].DescriptionMobileWeb);
                     // Add to the card-group div
                     newDiv.append(innerDiv);
-                    $('.results').append(newDiv);
+                    $('.row').append(newDiv);
 
                     // Add the image to each card
                     // $('.card-body').before(imageDiv);
