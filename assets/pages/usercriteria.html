@@ -28,6 +28,8 @@
   const beachData = firebase.database()
   beachData.ref().orderByChild("BIKE_PATH").equalTo("Yes")  .once("value").then(function(snapshot){
     console.log(snapshot.val())
+    console.log(beachData.LSDJpleUxYUniEVc0nE.length);
+    
   })
 </script>
   </body>
