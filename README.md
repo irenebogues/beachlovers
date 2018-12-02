@@ -2,7 +2,7 @@
 Hacking the beach for good and beyond. This is our first group project of Columbia Engineering Coding Boot Camp.
 
 ## Goal
-To create a web app that make beach information more available to the public & the community and actively participate in local beach cleanup and improve user experience thru better beach matching search results.
+To create a web app that make beach information more available to the public and actively participate in local beach cleanup To improve user experience thru better beach matching search results.
 
 ## Functionality
 The web app enables beach lovers to choose different criterias that provides real time information on the beach existing ammenities and if the beach has a clean-up event. Google Maps API integration will help beach goers correctly navigate to its exact destination.
