@@ -54,7 +54,9 @@ Apply all the technologies learned up to current point in bootcamp to create a e
 * UX Researcher
 * Powerpoint Presentation
 * Integrating Results in Google Maps
+* Google Cloud Console Manager
 * Manage Github Master Branch
+
 
 **Omar El Gammal** 
 * Updates Google Maps User Experience
