@@ -47,21 +47,21 @@ Apply all the technologies learned up to current point in bootcamp to create an 
 * Creating Beach Criteria to users
 * Creating Beach Clean-up events to users
 * Dynamically generate search results
-* New library implementation
+* New library search criteria results implementation
 * Point-person to California Coastal Commission IT Department
  
 **Irene Bogues** 
 * First Page UX/UI Design
 * UX Researcher
 * Powerpoint Presentation
-* Integrating Results in Google Maps
+* Preparing Google Maps dynamic integration with search results
 * Google Cloud Console Manager
 * Manage Github Master Branch
-
 
 **Omar El Gammal** 
 * Updates Google Maps User Experience
 
 **Margaretta Hemmings** 
 * Creating Forms for user profile
+* Creating Yes/No buttons to users
 * Plastic Pollution Info Page
