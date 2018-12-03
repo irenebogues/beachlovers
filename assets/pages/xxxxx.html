@@ -102,6 +102,7 @@
             var chooseToilet    = 'Yes';    // RESTROOMS
 
             // Event listener - listens to changes in form
+<<<<<<< HEAD
             $('#user-input').submit(event => 
             {
                 event.preventDefault();
@@ -129,6 +130,26 @@
                 PARKING
                 RESTROOMS
             */
+=======
+            
+            $('.form-group').on('change', function(event){
+            event.preventDefault();
+              chooseBike      = $('#option1').val();		// Hold answer to option1	
+            chooseDog 		= $('#option2').val();		// Hold answer to option2
+              chooseParking 	= $('#option3').val();		// Hold answer to option3
+             chooseToilet 	= $('#option4').val();		// Hold answer to option4
+             })
+            // Step 2 - Filter results
+            
+                // API OBJECTS PROPERTIES
+                // path    -- response[index].property
+                // example -- response[0].BIKE_PATH
+                // BIKE_PATH
+                // DOG_FRIENDLY
+                // PARKING
+                // RESTROOMS
+        
+>>>>>>> master
             var beachArray  = [];
             var count = 0;
             var yes = 0, no = 0;
