@@ -2,7 +2,7 @@
  * 	Javascript file for proj1_userSelection.js
  * 	Author: Jonathan Garcia
  * 	First Created 11/13/2018
- * 	Last Modified 11/20/2018 
+ * 	Last Modified 12/02/2018 
  */
 
 // $(document).ready(function(){
@@ -54,17 +54,17 @@
 		$('.form-group').on('change', function(){
 			// event.preventDefault();
 
-			bike 		= $('#option1').val();		// Hold answer to option1	
-			dog 		= $('#option2').val();		// Hold answer to option2
-			parking 	= $('#option3').val();		// Hold answer to option3
-			restrooms 	= $('#option4').val();		// Hold answer to option4
-			volleyball 	= $('#option5').val();		// Hold answer to option5
+			// bike 		= $('#option1').val();		// Hold answer to option1	
+			// dog 		= $('#option2').val();		// Hold answer to option2
+			// parking 	= $('#option3').val();		// Hold answer to option3
+			// restrooms 	= $('#option4').val();		// Hold answer to option4
+			// volleyball 	= $('#option5').val();		// Hold answer to option5
 
-			objChoices.BIKE_PATH 	= bike;			// Set bike answer into Obj
-			objChoices.DOG_FRIENDLY = dog;			// Set dog answer into Obj
-			objChoices.PARKING 		= parking;		// Set parking answer into Obj
-			objChoices.RESTROOMS 	= restrooms;	// Set restrooms answer into Obj
-			objChoices.VOLLEYBALL 	= volleyball;	// Set volleyball answer into Obj
+			objChoices.BIKE_PATH = $('#option1').val();		// Hold answer to option1	
+			objChoices.DOG_FRIENDLY	= $('#option2').val();		// Hold answer to option2
+			objChoices.PARKING = $('#option3').val();		// Hold answer to option3
+			objChoices.RESTROOMS = $('#option4').val();		// Hold answer to option4
+			objChoices.VOLLEYBALL = $('#option5').val();		// Hold answer to option5
 			
 			// console.log(objChoices);				// See object contents
 			// step2(objChoices);
@@ -126,12 +126,11 @@
 				// populate the final array with duplicates removed
 				final = removeDuplicates(tmp);
 				
-
 				// console.log('--------------------');
 				// console.log(final);
 
 				// Populate webpage with filtered results
-				for (let index = 0; index < 9; index++) 
+				for (let index = 0; index < 30; index++) 
             	{
                     // Elements
                     var newDiv          = $('<div class="card">');           
@@ -142,7 +141,9 @@
                         newParagraph.text(final[index].DescriptionMobileWeb);
                     var imageDiv        = $('<img class="card-img-top">');
                         imageDiv.attr('src', final[index].Photo_1);
-                    var goButton        = $('<a class="btn btn-primary" role="button" >');
+					var goButton        = $('<a class="btn btn-primary" role="button" >');
+						// Add Latitude and Longitude to each Lets Go Button
+						goButton.attr('data-location', (final[index].LATITUDE + "," + final[index].LONGITUDE));
                     var cleanBtn        = $('<a class="btn btn-success" role="button">');
                     
                     // Add text to buttons
@@ -181,6 +182,6 @@
 			  if ($.inArray(e, result) == -1) result.push(e);
 			});
 			return result;
-		  }
+		}
 
 // }); // END OF FILE

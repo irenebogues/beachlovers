@@ -87,7 +87,8 @@
             url: queryURL,
             method: "GET"
         })
-        .then(function(response) {
+        .then(function(response) 
+        {
 
             console.log(response);
              // Step 1 - save the user choices
@@ -101,11 +102,13 @@
             var chooseToilet    = 'Yes';    // RESTROOMS
 
             // Event listener - listens to changes in form
-            $('#user-input').submit(event => {
+            $('#user-input').submit(event => 
+            {
                 event.preventDefault();
                 const userSelections = $('.form-control'); //grabs raw jquery array of the select tags
                 const formattedSelections = []; //empty array to only store user option
-                for (let i = 0; i < userSelections.length; i++) { //loops thru jquery array to grab user option for each item
+                for (let i = 0; i < userSelections.length; i++) 
+                { //loops thru jquery array to grab user option for each item
                     const userOption = $(userSelections[i])
                     .find(':selected')
                     .text();
@@ -114,7 +117,7 @@
                 console.log(formattedSelections);
             
                 //formattedSelections will now hold the user options for each question
-      //You can now use this to populate Yes/No responses instead of hard coding it
+                //You can now use this to populate Yes/No responses instead of hard coding it
     
             // Step 2 - Filter results
             /*
@@ -126,73 +129,73 @@
                 PARKING
                 RESTROOMS
             */
-            // var beachArray  = [];
-            // var count = 0;
-            // var yes = 0, no = 0;
+            var beachArray  = [];
+            var count = 0;
+            var yes = 0, no = 0;
 
-            // for (let i = 0; i < response.length; i++) {
-            //     if ((response[i].BIKE_PATH === chooseBike) && 
-            //         (response[i].DOG_FRIENDLY === chooseDog)&& 
-            //         (response[i].PARKING === chooseParking)&& 
-            //         (response[i].RESTROOMS === chooseToilet)){
-            //         tmpArr[i] = response[i];
-            //     }
-            // }
+            for (let i = 0; i < response.length; i++) {
+                if ((response[i].BIKE_PATH === chooseBike) && 
+                    (response[i].DOG_FRIENDLY === chooseDog)&& 
+                    (response[i].PARKING === chooseParking)&& 
+                    (response[i].RESTROOMS === chooseToilet)){
+                    tmpArr[i] = response[i];
+                }
+            }
 
-            // // This will filter the results - Each NameMobileWeb will be unique
-            // // ======================================================================
-            // var uniqueNames = [];
-            // $.each(tmpArr, function(i, el){
-            //     if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
-            // });
+            // This will filter the results - Each NameMobileWeb will be unique
+            // ======================================================================
+            var uniqueNames = [];
+            $.each(tmpArr, function(i, el){
+                if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+            });
 
-            // console.log(tmpArr);
-            // console.log(uniqueNames);
-            // // ======================================================================
+            console.log(tmpArr);
+            console.log(uniqueNames);
+            // ======================================================================
             
-            //  console.log(response);
+             console.log(response);
             
             
-            // for (let index = 0; index < 9; index++) 
-            // {
-            //         // Elements
-            //         var newDiv          = $('<div class="card">');           
-            //         var innerDiv        = $('<div class="card-body">');    
-            //         var newHeading      = $('<h4>');
-            //             newHeading.text(coastalLocationResponse[index].NameMobileWeb);
-            //         var newParagraph    = $('<p>');
-            //             newParagraph.text(coastalLocationResponse[index].DescriptionMobileWeb);
-            //         var imageDiv        = $('<img class="card-img-top">');
-            //             imageDiv.attr('src', coastalLocationResponse[index].Photo_1);
-            //         var goButton        = $('<a class="btn btn-primary" role="button" >');
-            //         var cleanBtn        = $('<a class="btn btn-success" role="button">');
+            for (let index = 0; index < 9; index++) 
+            {
+                    // Elements
+                    var newDiv          = $('<div class="card">');           
+                    var innerDiv        = $('<div class="card-body">');    
+                    var newHeading      = $('<h4>');
+                        newHeading.text(coastalLocationResponse[index].NameMobileWeb);
+                    var newParagraph    = $('<p>');
+                        newParagraph.text(coastalLocationResponse[index].DescriptionMobileWeb);
+                    var imageDiv        = $('<img class="card-img-top">');
+                        imageDiv.attr('src', coastalLocationResponse[index].Photo_1);
+                    var goButton        = $('<a class="btn btn-primary" role="button" >');
+                    var cleanBtn        = $('<a class="btn btn-success" role="button">');
                     
-            //         // Add text to buttons
-            //         goButton.text("Let's Go");
-            //         cleanBtn.text("CleanUp Info");
+                    // Add text to buttons
+                    goButton.text("Let's Go");
+                    cleanBtn.text("CleanUp Info");
 
-            //         // Build the inner div
-            //         innerDiv.append(newHeading);
-            //         innerDiv.append(newParagraph);
-            //         innerDiv.append(goButton);
-            //         innerDiv.append(cleanBtn);
-            //         innerDiv.prepend(imageDiv);
+                    // Build the inner div
+                    innerDiv.append(newHeading);
+                    innerDiv.append(newParagraph);
+                    innerDiv.append(goButton);
+                    innerDiv.append(cleanBtn);
+                    innerDiv.prepend(imageDiv);
                     
-            //         // Append to outer div & add image
-            //         // newDiv.append(innerDiv);
-            //         // imageDiv.attr('src', coastalLocationResponse[index].Photo_1);
+                    // Append to outer div & add image
+                    // newDiv.append(innerDiv);
+                    // imageDiv.attr('src', coastalLocationResponse[index].Photo_1);
 
-            //         // newHeading.text(coastalLocationResponse[index].NameMobileWeb);
-            //         // newParagraph.text(coastalLocationResponse[index].DescriptionMobileWeb);
-            //         // Add to the card-group div
-            //         newDiv.append(innerDiv);
-            //         $('.target').append(newDiv);
+                    // newHeading.text(coastalLocationResponse[index].NameMobileWeb);
+                    // newParagraph.text(coastalLocationResponse[index].DescriptionMobileWeb);
+                    // Add to the card-group div
+                    newDiv.append(innerDiv);
+                    $('.target').append(newDiv);
 
-            //         // Add the image to each card
-            //         // $('.card-body').before(imageDiv);
-            //         // Add the href to each go button
-            //         // goButton.attr('href', 'http://www.ebparks.org');
-            // } // end of for loop
+                    // Add the image to each card
+                    // $('.card-body').before(imageDiv);
+                    // Add the href to each go button
+                    // goButton.attr('href', 'http://www.ebparks.org');
+            } // end of for loop
         }) // end of ajax call
     </script>
 </body>
