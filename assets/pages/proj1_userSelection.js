@@ -46,19 +46,12 @@
 	 * 	Each variable is used inside the change event listener
 	 */
 	
-	var bike, dog, parking, restrooms, volleyball;
 	var tmp = [];
 	var final = [];
 
 		// LISTENER - CHANGE EVENT LISTENER
 		$('.form-group').on('change', function(){
 			// event.preventDefault();
-
-			// bike 		= $('#option1').val();		// Hold answer to option1	
-			// dog 		= $('#option2').val();		// Hold answer to option2
-			// parking 	= $('#option3').val();		// Hold answer to option3
-			// restrooms 	= $('#option4').val();		// Hold answer to option4
-			// volleyball 	= $('#option5').val();		// Hold answer to option5
 
 			objChoices.BIKE_PATH = $('#option1').val();		// Hold answer to option1	
 			objChoices.DOG_FRIENDLY	= $('#option2').val();		// Hold answer to option2
@@ -121,14 +114,13 @@
 					}
 				}// end of for-loop
 				
-				console.log(tmp);
+				console.log(tmp); // See unfiltered results
 				
 				// populate the final array with duplicates removed
 				final = removeDuplicates(tmp);
 				
-				// console.log('--------------------');
-				// console.log(final);
-
+				console.log(final); // See filtered results with duplicates removed
+				
 				// Populate webpage with filtered results
 				for (let index = 0; index < 30; index++) 
             	{
@@ -144,8 +136,12 @@
 					var goButton        = $('<a class="btn btn-primary" role="button" >');
 						// Add Latitude and Longitude to each Lets Go Button
 						goButton.attr('data-location', (final[index].LATITUDE + "," + final[index].LONGITUDE));
-                    var cleanBtn        = $('<a class="btn btn-success" role="button">');
-                    
+						// Add href to google maps? -- Example : //https://www.google.com/maps/place/41.992854,-124.208809
+						goButton.attr('href', "https://www.google.com/maps/place/" + (final[index].LATITUDE + "," + final[index].LONGITUDE));
+						
+					var cleanBtn        = $('<a class="btn btn-success" role="button">');
+						// Add clean up webpage to each Clean Up Info Button
+						cleanBtn.attr('href', "http://www.ebparks.org/about/getinvolved/volunteer/events");
                     // Add text to buttons
                     goButton.text("Let's Go");
                     cleanBtn.text("CleanUp Info");
@@ -171,7 +167,9 @@
                     // $('.card-body').before(imageDiv);
                     // Add the href to each go button
                     // goButton.attr('href', 'http://www.ebparks.org');
-            	} // end of for loop
+				} // end of for loop
+				
+				$(".btn-success").attr("href" , argumnet)
 				  
 			}); // end of ajax call
 		}
@@ -183,5 +181,6 @@
 			});
 			return result;
 		}
+
 
 // }); // END OF FILE
