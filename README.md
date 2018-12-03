@@ -15,9 +15,10 @@ Apply all the technologies learned up to current point in bootcamp to create a e
 | Section              |  Action                                                  |
 | ---------------------|----------------------------------------------------------|
 | Beach Search Criteria|  Shows beach ammenities and description                  |
-| Beach Search Results |  Shows user beach search criteri                         |
-| Beach Search Results |  Shows user let's go button and clean-up events
-| Google Maps          |  Shows user location from point A to B with markers      |
+| Beach Search Results |  Shows user beach search criteria                        |
+| Beach Search Results |  Shows user let's go button and clean-up events          |
+| Google Maps          |  Shows user location from point A to B with markers with 
+user's exact location and beach location with travel route                        |
 
 **Future Development**
 
@@ -37,7 +38,8 @@ Apply all the technologies learned up to current point in bootcamp to create a e
 * Ajax
 * jQuery
 * REST API
-* Google Maps API
+* Particles JS
+* Google Maps API (Geolocation API, Maps JavaScript API, Google Maps Direction Service Route API)  
 * California Coastal Commission API
 
 ## Authors
