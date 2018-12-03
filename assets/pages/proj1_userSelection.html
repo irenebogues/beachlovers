@@ -6,26 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beach Cleaning | pg 2</title>
 
-
+    <!-- CSS RESET -->
+    <link rel="stylesheet" href="../css/cssReset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
         .question-area {
-            width: 90%;
+            width: 300px;
             margin: 10px auto;
             border: solid 2px;
             border-radius: 10px;
             padding: 2%;
+            float: left;
+            /* position: fixed; */
+            display: flex;
         }
+        .card {
+            width: 18rem;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 163px;
+        }
+
+        button {
+            clear: both;
+            float: left;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="question-area">
         <!-- Start of form div -->
+<<<<<<< HEAD
             <div>
+=======
+        <form>
+            <div class="form-group" data-choice="BIKE_PATH">
+>>>>>>> jonathan
                 <label for="BIKE_PATH"><i class="fas fa-bicycle fa-2x"></i> Are you biking?</label>
                 <select class="form-control q-bike" id="option1" data-choice-type="BIKE_PATH">
                 <option selected>Choose</option>
@@ -33,7 +58,7 @@
                 <option>No</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" data-choice="DOG_FRIENDLY">
                 <label for="DOG_FRIENDLY"><i class="fas fa-dog fa-2x"></i> Will your dog join you?</label>
                 <select class="form-control q-dog" id="option2" data-choice-type="DOG_FRIENDLY">
                 <option selected>Choose</option>
@@ -41,7 +66,7 @@
                 <option>No</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" data-choice="PARKING">
                 <label for="PARKING"><i class="fas fa-parking fa-2x"></i> Do you need parking?</label>
                 <select class="form-control q-parking" id="option3" data-choice-type="PARKING">
                 <option selected>Choose</option>
@@ -49,7 +74,7 @@
                 <option>No</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" data-choice="RESTROOMS">
                 <label for="RESTROOMS"><i class="fas fa-toilet-paper fa-2x"></i> Must have public restrooms?</label>
                 <select class="form-control q-restrooms" id="option4" data-choice-type="RESTROOMS">
                 <option selected>Choose</option>
@@ -57,7 +82,7 @@
                 <option>No</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" data-choice="VOLLEYBALL">
                 <label for="VOLLEYBALL"><i class="fas fa-volleyball-ball fa-2x"></i> Are you looking for Volleyball?</label>
                 <select class="form-control q-volleyball" id="option5" data-choice-type="VOLLEYBALL">
                 <option selected>Choose</option>
@@ -66,10 +91,20 @@
                 </select>
             </div>
             <!-- submit button -->
+<<<<<<< HEAD
             <a class="button btn btn-primary" href="proj1_pg3.html">Submit</a>
         </form> 
         <!-- End of form-div -->
+=======
+            <button type="submit" class="btn btn-primary" href="proj1_pg3.html">Submit</button>
+        </form> <!-- End of form-div -->
+>>>>>>> jonathan
     </div>
+    <div class="results">
+        <div class="row"></div> 
+    </div>
+
+     
      
     <!-- Bootstrap recommended javascript -->
     <!-- <script>
@@ -94,18 +129,13 @@
     </script> -->
     
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="findbeach.js"></script>
-    <script>
-    
-        // $('.btn').on('click' function(){
-        //     window.location = 'proj1_pg3.html';
-        // });
-    </script>
+    <!-- <script src="findbeach.js"></script> -->
+    <script src="proj1_userSelection.js"></script>
+
 </body>
 </html>
