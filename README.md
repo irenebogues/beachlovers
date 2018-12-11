@@ -8,7 +8,7 @@ To create a web app that make beach information more available to the public and
 The web app enables beach lovers to choose different criterias that provides real time information on the beach existing ammenities and if the beach has a clean-up event. Google Maps API integration will help beach goers correctly navigate to its exact destination.
 
 ## Objective
-Apply all the technologies learned up to current point in bootcamp to create a environmentally friendly, beach matching  web application.
+Apply all the technologies learned up to current point in bootcamp to create an environmentally friendly, beach matching  web application.
 
 **Implemented**
 
@@ -47,21 +47,21 @@ Apply all the technologies learned up to current point in bootcamp to create a e
 * Creating Beach Criteria to users
 * Creating Beach Clean-up events to users
 * Dynamically generate search results
-* New library implementation
+* New library search criteria results implementation
 * Point-person to California Coastal Commission IT Department
  
 **Irene Bogues** 
 * First Page UX/UI Design
 * UX Researcher
 * Powerpoint Presentation
-* Integrating Results in Google Maps
+* Preparing Google Maps dynamic integration with search results
 * Google Cloud Console Manager
 * Manage Github Master Branch
-
 
 **Omar El Gammal** 
 * Updates Google Maps User Experience
 
 **Margaretta Hemmings** 
 * Creating Forms for user profile
+* Creating Yes/No buttons to users
 * Plastic Pollution Info Page
