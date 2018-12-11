@@ -169,7 +169,7 @@
                     // goButton.attr('href', 'http://www.ebparks.org');
 				} // end of for loop
 				
-				$(".btn-success").attr("href" , argumnet)
+				$(".btn-success").attr("href" , argument)
 				  
 			}); // end of ajax call
 		}
@@ -183,4 +183,4 @@
 		}
 
 
-// }); // END OF FILE
+ }); // END OF FILE
