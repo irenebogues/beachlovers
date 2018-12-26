@@ -1,3 +1,4 @@
+console.log("hello")
 particlesJS("particles-js", {
     "particles":{"number":{"value":144,
     "density":{"enable":true,"value_area":1282.7296486924183}},
