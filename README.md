@@ -55,13 +55,6 @@ Apply all the technologies learned up to current point in bootcamp to create an 
 * UX Researcher
 * Powerpoint Presentation
 * Preparing Google Maps dynamic integration with search results
-* Google Cloud Console Manager
+* Google Cloud Console Manager/ Google Maps
 * Manage Github Master Branch
 
-**Omar El Gammal** 
-* Updates Google Maps User Experience
-
-**Margaretta Hemmings** 
-* Creating Forms for user profile
-* Creating Yes/No buttons to users
-* Plastic Pollution Info Page
